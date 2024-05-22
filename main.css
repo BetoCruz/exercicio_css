@@ -1,0 +1,169 @@
+*{/* Este seletor , asteristico, é um seletor para aplicação em todos os elementos*/
+    box-sizing: border-box; 
+    /*  
+    box-sizing para que cada
+    valor de margem , padding , borda e elemento 
+    seja uma porcentagem do valor total do box
+    definido, sem que os valores individuais
+    quebrem o valor total definido para o bloco
+    */
+    margin: 0;
+    padding: 0;    
+}
+
+/* h1{ 
+    color: rgb(249, 246, 246);
+} */
+
+h2{
+    color: rgb(28, 26, 26);
+}
+
+/* "#" é para uso dos IDs como seletores CSS*/
+#economy h2 {
+    color: gold;
+}
+
+.creation-date{/*O seletor ponto é usado para usar classes CSS  */
+    color: rgb(97, 94, 94);
+}
+
+/*-----------------------------------------------------------*/
+body > header{ /*body > header :configura apenas o filho direto de bady, e não mais asoutras tags header*/
+    background-color:#2F3640;
+    padding: 16px 0;
+    color:rgb(249, 246, 246);
+}
+header .container{
+    display: flex; /*Alinha os elementos do header*/
+    align-items: center; /*Alinha os itens do seletor "header li a" */
+    justify-content: space-between;
+}
+header li{
+    display: inline;/*Apresenta os elementos em linha*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: left 16px 0;
+}
+
+header li a{/*Acessando os itens anchor nos itens de lista*/
+    color: #f5f6fa;
+    text-decoration: none;
+}
+
+.container{
+    width:1366px ;
+    margin: 0 auto;
+    /* display: inline; */
+    
+}
+
+
+/*-----------------------------------------------------------*/
+section{
+    padding: 16px 0;
+}
+section h2, .articles article {/*uso de uma regra para mais seletores*/
+    margin-bottom: 16px;
+}
+.articles article h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.articles article a {
+    border-radius: 5px;
+    background-color: blue; 
+    color: #FFF;
+    padding: 8px;
+    display: inline-block;
+    /*border-radius: 10px;*/
+    text-decoration: none;/*Retira o sublinhado da teg <a>*/
+    font-weight: bold; /*peso da fonte*/
+    margin-top: 16px;
+}
+.articles article a:hover{/*hover representa o estado do elemento*/
+    text-decoration: underline;
+    
+}
+
+/*------------------------------------------------*/
+.articles article p,
+.articles article a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.articles article h3{
+    font-size: 24px;
+}
+section h2{
+    font-size: 32px;
+}
+
+/*-----------Estilizando Seções-------------*/
+#sports{
+    background-color: rgba(0,255,0,0.1);
+}
+#sports .articles article a {
+    background-color: #009432;
+}
+
+#economy{
+    background-color: #fffa65;
+}
+#economy .articles article a {
+    background-color:#ff9f1a;
+}
+
+#technology{
+    background-color: #afeef7;
+}
+#technology .articles article a{
+    background-color: #076a79;
+}
+
+#trips{
+    background-color: #daaff6;
+}
+#trips .articles article a{
+    background-color: #9911f4;
+}
+
+.articles{
+    display: flex;/*passamos a usar o modulo flexbox do CSS*/
+    flex-wrap: wrap;/*para que artigos adicionados formem uma outra linha de apresentação se no alinhamento atual estiver cheio*/
+    justify-content: space-between;/*Utiliza o espaço entre os artigos igualmente*/
+
+}
+
+.articles article img {
+    /* height: 150px; */
+    width: 80%;/*a imagem agora tem 100% da teg article*/
+    height: 200px;
+}
+
+.articles article{
+    width: 31%;
+}
+
+
+
+/*------------<!--aula Altere a posição (Position) com CSS----->---------*/
+body{
+    /*position: relative;
+    posição relativa é o container com a
+    area de posicionamento para o elemento de posição absoluta,*/
+}
+.position-absolute{/*
+    position: absolute; top: 0; left:0;
+    /*O elemento de posição absoluta tem como referencia de área o
+     elemento pai com a propiedade position: relative.
+     valores negativos de posição como top:-10px; e left:-10px;
+      deslocam o elemento da área do elemto pai */ 
+    
+}
+.position-fixed{/*
+    position: fixed; bottom: 0; right:0;
+    /*O elemento de posição FIXED tem como referencia de área o
+     elemento pai com a propiedade position: relative.
+     valores negativos de posição como top:-10px; e left:-10px;
+      deslocam o elemento da área do elemto pai */ 
+}
